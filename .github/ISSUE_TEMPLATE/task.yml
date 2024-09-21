@@ -1,0 +1,57 @@
+name: 🛠 Task Preparation
+description: Prepare a task as a sub-item of a feature in this repository
+labels: [task]
+projects: [RalbaStudio/24]
+body:
+  - type: textarea
+    id: task-description
+    attributes:
+      label: Task Description
+      description: Provide a detailed description of the task, outlining the objective and key elements.
+      placeholder: Develop the backend API for the user login feature. The API should authenticate users and return an authentication token.
+    validations:
+      required: true
+
+  - type: textarea
+    id: task-subtasks
+    attributes:
+      label: Subtasks
+      description: Break the task into smaller, actionable subtasks if it is complex.
+      value: |
+        ```[tasklist]
+        - [ ] Set up user authentication endpoints
+        ````
+
+  - type: textarea
+    id: task-assumption
+    attributes:
+      label: Assumptions
+      description: List any assumptions that might impact the task or feature.
+      placeholder: |
+        - The front-end team will handle the UI design for the login page.
+
+  - type: textarea
+    id: task-acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Define the success criteria for the task. This helps in ensuring the task is completed as expected.
+      placeholder: |
+        - API should return a 200 response on successful login.
+        - The token should be valid for 24 hours.
+        - Errors should return appropriate status codes (e.g., 401 for invalid credentials).
+
+  - type: textarea
+    id: task-dependencies
+    attributes:
+      label: Dependencies
+      description: Identify any dependencies on other tasks, teams, or external factors that may need to be resolved before the task can start or be completed.
+      placeholder: |
+        - This task depends on the completion of the user database schema setup.
+
+  - type: textarea
+    id: task-references
+    attributes:
+      label: Resources/References
+      value: |
+        - [Notion](link)
+        - [Figma](link)
